@@ -1,40 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     font-family: 'Roboto';
+    font-size: 12px;
 }
 
 header { 
     background-color: #EAC926;
-    font-size: 12px; 
-    
 }
 
-.top-header p {
+header .top-header p {                      /*para centrar el texto de comprar en cuotas*/
     text-align: center;
+    width: 100%;
+    margin-top: 10px;
 }
 
-header nav ul li {
+div.top-header{                             /*centra el logo*/
+    padding: 5%;
+}
+
+header .top-header img{                     /*estilos logo*/
+    width: 50%;
+    padding: 10px;
+}
+
+
+.top-header div{                            /*para separar el boton de busqueda del borde*/
+    padding-left: 20px;
+}
+
+header .top-header div input,
+header .top-header div button{               /*boton busca aqui*/
+    border: 1px solid black;
+    padding: 2px;
+}
+
+header nav ul li {                          /*modifica el estilo de la lista*/
     list-style-type: none;
 }
 
-header nav ul li a {
+header nav ul li a {                        /*quita el subrayado y cambia el color de los items de la lista*/
     text-decoration: none;
     color:black;
 }
 
-header nav ul {
-    padding: 10px 0;
+header nav ul {                             /*modifica el padding del ul que por defecto es 40px*/
+    padding-left: 10px;
 }
 
-header .button-container{
+header .button-container{                   /*centra el boton hamburguesa*/
     text-align: center;
     padding-bottom: 10px;
 }
 
-header button.bars-menu {
+header button.bars-menu {                   /*estilos del boton*/
     border-radius: 5px;
     background-color: #03264C;
     color: white;
     padding: 10px;
     font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
 }
 
+h3{                                         /*estilos para subtitulos Ofertas y Basado en ult visita*/
+    font-size: 24px;
+}
+
+.discount,
+.description{                               /*estilos para el descuento y descripcion*/
+    font-size: 16px;
+}
+
+.price {                                    /*estilo solo para el precio*/
+    font-size: 18px;
+}
+
+section.banner img{                         /*banner de ofertas*/
+    width: 100%;
+}
+
+main{                                       /*contenedor main*/
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{                       /*contenedor de artiuclos*/
+    background-color: #fff;
+    margin: 10px 0px;
+}
+
+main section article img{                   /*imagenes de articulos*/
+    width: 100%;
+}
+
+main section article i,                     /*color ofertas e icono de envios*/
+.discount{
+    color: #39b54a;
+}
+
+.main-article{                              /*separa imagen de producto*/
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.main-article i{                            /*icono envios*/
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+h4{                                         /*titulares de footer*/
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px;
+}
+
+footer .button-container-footer{            /*contenedor de botones y texto*/
+    text-align: center;
+}
+
+footer .button-footer{                      /*iconos footer*/
+    color: #03264C;
+    font-size: 2em;
+    border: 0px;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 40px;
+} 
+
+.button-container-footer p{                 /*parrafos del footer*/
+    margin: 0px;
+}
+
+.description{                               /*oculta nombre de producto*/
+    display: none;
+}
+
+nav{                                        /*oculta navegacion del header*/
+    display: none;
+}
