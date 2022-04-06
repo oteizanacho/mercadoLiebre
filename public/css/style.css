@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto';
+}
+
+header { 
+    background-color: #EAC926;
+    font-size: 12px; 
+    
+}
+
+.top-header p {
+    text-align: center;
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color:black;
+}
+
+header nav ul {
+    padding: 10px 0;
+}
+
+header .button-container{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+header button.bars-menu {
+    border-radius: 5px;
+    background-color: #03264C;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
