@@ -1,11 +1,13 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto';
     font-size: 12px;
+    background-color: #ebebeb;
 }
 
 header { 
@@ -14,8 +16,17 @@ header {
 
 header .top-header p {                      /*para centrar el texto de comprar en cuotas*/
     text-align: center;
-    width: 100%;
     margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-header{                                /*estilos logo barra parrafo*/
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    display: flex;
 }
 
 div.top-header{                             /*centra el logo*/
@@ -36,6 +47,12 @@ header .top-header div input,
 header .top-header div button{               /*boton busca aqui*/
     border: 1px solid black;
     padding: 2px;
+    color: #666;
+    background-color: #fff;
+}
+
+header .top-header div button{
+    width: 10%;
 }
 
 header nav ul li {                          /*modifica el estilo de la lista*/
@@ -71,6 +88,11 @@ h3{                                         /*estilos para subtitulos Ofertas y 
     font-size: 24px;
 }
 
+h3,                                         /*color de seccion visitas y ofertas y descripciones */
+.description{
+    color: #666;
+}
+
 .discount,
 .description{                               /*estilos para el descuento y descripcion*/
     font-size: 16px;
@@ -78,6 +100,7 @@ h3{                                         /*estilos para subtitulos Ofertas y 
 
 .price {                                    /*estilo solo para el precio*/
     font-size: 18px;
+    flex: 30%;
 }
 
 section.banner img{                         /*banner de ofertas*/
@@ -106,6 +129,12 @@ main section article i,                     /*color ofertas e icono de envios*/
 .main-article{                              /*separa imagen de producto*/
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap ;
+    position: relative;
+    width: 100%;
+    align-content:flex-start;
 }
 
 .main-article i{                            /*icono envios*/
@@ -114,10 +143,32 @@ main section article i,                     /*color ofertas e icono de envios*/
     padding: 5px;
 }
 
+main section article i{                     /*nuevos estilos carrito*/
+    display:block;  
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.discount{
+    flex: 70%;
+}
+
 h4{                                         /*titulares de footer*/
+    margin: 0px;
+    font-weight: lighter;
+}
+
+footer div h4{
     font-weight: bold;
     font-size: 16px;
-    margin: 0px;
 }
 
 footer .button-container-footer{            /*contenedor de botones y texto*/
@@ -143,4 +194,75 @@ footer .button-footer{                      /*iconos footer*/
 
 nav{                                        /*oculta navegacion del header*/
     display: none;
+}
+
+@media screen and (min-width:361px) and (max-width:769px) {
+    .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0 0 10px rgb(100,100,100);
+        width: 45%;
+    }
+
+    nav{
+        display: block;
+    }
+
+    .button-container{
+        display: none;
+    }
+
+    main section .productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (min-width:769px){
+    .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0 0 10px rgb(100,100,100);
+        width: 22%;
+    }
+    
+    nav{
+        display: block;
+    }
+
+    .button-container{
+        display: none;
+    }
+
+    main section .productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .top-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: nowrap;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
 }
