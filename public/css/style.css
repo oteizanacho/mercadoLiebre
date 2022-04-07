@@ -220,6 +220,9 @@ nav{                                        /*oculta navegacion del header*/
         justify-content: space-between;
     }
 
+    header nav{
+        display: none;
+    }
 }
 
 @media screen and (min-width:769px){
