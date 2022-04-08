@@ -14,45 +14,36 @@ header {
     background-color: #EAC926;
 }
 
-header .top-header p {                      /*para centrar el texto de comprar en cuotas*/
-    text-align: center;
+header .top-header p {                      /*texto de comprar en cuotas*/
     margin-top: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.top-header{                                /*estilos logo barra parrafo*/
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
     display: flex;
 }
 
-div.top-header{                             /*centra el logo*/
-    padding: 5%;
+.top-header{                                /*estilos logo barra parrafo*/
+    flex-wrap: wrap;
+    align-items: baseline;
+    display: flex;
+    flex: auto;
+    justify-content: center;
 }
 
-header .top-header img{                     /*estilos logo*/
+div.top-header .logo{                       /*centra el logo*/
+    padding: 30px 10px 0px 10px;
     width: 50%;
-    padding: 10px;
 }
 
-
-.top-header div{                            /*para separar el boton de busqueda del borde*/
-    padding-left: 20px;
+header .form{
+    width: 50%;
+    display: inline-flex;
 }
 
-header .top-header div input,
-header .top-header div button{               /*boton busca aqui*/
-    border: 1px solid black;
-    padding: 2px;
+.form{                                      /*boton busca aqui*/
+    text-decoration: none;
+    border: none;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
     color: #666;
-    background-color: #fff;
-}
-
-header .top-header div button{
-    width: 10%;
 }
 
 header nav ul li {                          /*modifica el estilo de la lista*/
@@ -62,10 +53,6 @@ header nav ul li {                          /*modifica el estilo de la lista*/
 header nav ul li a {                        /*quita el subrayado y cambia el color de los items de la lista*/
     text-decoration: none;
     color:black;
-}
-
-header nav ul {                             /*modifica el padding del ul que por defecto es 40px*/
-    padding-left: 10px;
 }
 
 header .button-container{                   /*centra el boton hamburguesa*/
@@ -220,9 +207,33 @@ nav{                                        /*oculta navegacion del header*/
         justify-content: space-between;
     }
 
-    header nav{
-        display: none;
+    header nav {
+        display: flex;
+        justify-content: space-between;
     }
+    
+    header nav ul{
+        display: flex;
+        padding: 10px;
+    }
+
+    header nav ul li{
+        padding: 3px;
+    }
+
+    .top-header{
+        justify-content: space-around;
+    }
+
+    div.top-header .logo,
+    header .form{
+        width: 30%;
+    }
+
+    header .top-header p{
+        width: 30%;
+    }
+
 }
 
 @media screen and (min-width:769px){
@@ -249,14 +260,6 @@ nav{                                        /*oculta navegacion del header*/
         justify-content: space-between;
     }
 
-    .top-header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        align-items: baseline;
-        flex-wrap: nowrap;
-    }
-
     header nav {
         display: flex;
         justify-content: space-between;
@@ -264,8 +267,18 @@ nav{                                        /*oculta navegacion del header*/
     
     header nav ul{
         display: flex;
+    }
+
+    header nav ul li{
+        padding: 15px;
+    }
+
+    .top-header{
         justify-content: space-around;
-        flex-direction: row;
-        align-items: center;
+    }
+
+    div.top-header .logo,
+    header .form{
+        width: 30%;
     }
 }
