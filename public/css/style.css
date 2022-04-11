@@ -21,18 +21,21 @@ header .top-header p {                      /*texto de comprar en cuotas*/
 
 .top-header{                                /*estilos logo barra parrafo*/
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
     display: flex;
     flex: auto;
     justify-content: center;
+    padding: 20px;
 }
 
 div.top-header .logo{                       /*centra el logo*/
-    padding: 30px 10px 0px 10px;
+    padding: 5px;
     width: 50%;
 }
 
-header .form{
+
+
+header .form{                               /*buscar productos marcas y mas*/
     width: 50%;
     display: inline-flex;
 }
@@ -153,7 +156,7 @@ h4{                                         /*titulares de footer*/
     font-weight: lighter;
 }
 
-footer div h4{
+footer div h4{                              
     font-weight: bold;
     font-size: 16px;
 }
@@ -181,6 +184,47 @@ footer .button-footer{                      /*iconos footer*/
 
 nav{                                        /*oculta navegacion del header*/
     display: none;
+}
+
+form{                                       /*formulario*/
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form div{                                   /*separa inserciones*/
+    padding: 10px 0px;
+}
+
+.input-styles{                              /*estilos de los input de texto*/
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #666;
+    background-color: #FFFFFF;
+}
+
+.intereses{                                 /*checkboxes intereses*/
+    display: flex;
+    flex-direction: column;
+}
+
+.intereses label{                           /*separa los intereses*/
+    padding: 10px 0px;
+}
+
+.button-type{                               /*botones enviar y borrar*/
+    color: white;
+    background-color: #03264C;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.button-type a{
+    text-decoration: none;
+    color: white;
 }
 
 @media screen and (min-width:361px) and (max-width:769px) {
@@ -222,7 +266,8 @@ nav{                                        /*oculta navegacion del header*/
     }
 
     .top-header{
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
     }
 
     div.top-header .logo,
@@ -231,7 +276,12 @@ nav{                                        /*oculta navegacion del header*/
     }
 
     header .top-header p{
-        width: 30%;
+        width: 25%;
+    }
+
+    form{
+        width: 50%;
+        margin: auto;
     }
 
 }
@@ -274,11 +324,17 @@ nav{                                        /*oculta navegacion del header*/
     }
 
     .top-header{
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
     }
 
     div.top-header .logo,
     header .form{
         width: 30%;
+    }
+
+    form{
+        width: 30%;
+        margin: auto;
     }
 }
