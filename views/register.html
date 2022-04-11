@@ -9,6 +9,18 @@
     <link href="/css/style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script>
+        function validar(){
+            if(document.getElementById('password').value == document.getElementById('password-verify').value){
+            document.getElementById('password-verify').style.backgroundColor="green"
+            document.getElementById('password-error-message').innerHTML='las contrasenas coinciden'
+        }
+        else{
+            document.getElementById('password-verify').style.backgroundColor='pink'
+            document.getElementById('password-error-message').innerHTML='Las contrasenas no coinciden'
+        }
+        }
+    </script>
 </head>
 
 <body>
@@ -86,11 +98,12 @@
                 <input type="file" name="avatar">
             </h2>
         </div>
-        <div>
-            <input type="password" name="pass" placeholder="Contrasena" class="input-styles">
-        </div>
-        <div>
-            <input type="password" name="confirm-pass" placeholder="Confirmar contrasena" class="input-styles">
+        <div class="passwords">
+            <input type="password" name="pass" placeholder="Contrasena" id="password" class="input-styles" minlength="8">
+            <input type="password" name="confirm-pass" placeholder="Confirmar contrasena" id="password-verify" class="input-styles" minlength="8" onkeyup="validar()">
+            <div>
+                <span id="password-error-message"></span>
+            </div>
         </div>
         <button type="submit" class="button-type"> Enviar</button>
         <button type="reset" class="button-type"> Borrar</button>

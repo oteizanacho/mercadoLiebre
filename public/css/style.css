@@ -227,6 +227,11 @@ form div{                                   /*separa inserciones*/
     color: white;
 }
 
+form input:invalid{
+    background-color: pink;
+}
+
+
 @media screen and (min-width:361px) and (max-width:769px) {
     .description{
         display: block;
