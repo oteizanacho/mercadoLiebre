@@ -33,8 +33,6 @@ div.top-header .logo{                       /*centra el logo*/
     width: 50%;
 }
 
-
-
 header .form{                               /*buscar productos marcas y mas*/
     width: 50%;
     display: inline-flex;
@@ -76,6 +74,7 @@ header button.bars-menu {                   /*estilos del boton*/
 
 h3{                                         /*estilos para subtitulos Ofertas y Basado en ult visita*/
     font-size: 24px;
+    padding: 10px;
 }
 
 h3,                                         /*color de seccion visitas y ofertas y descripciones */
@@ -127,12 +126,6 @@ main section article i,                     /*color ofertas e icono de envios*/
     align-content:flex-start;
 }
 
-.main-article i{                            /*icono envios*/
-    border: 1px solid #39b54a;
-    border-radius: 50%;
-    padding: 5px;
-}
-
 main section article i{                     /*nuevos estilos carrito*/
     display:block;  
     font-size: 16px;
@@ -169,14 +162,23 @@ footer .button-footer{                      /*iconos footer*/
     color: #03264C;
     font-size: 2em;
     border: 0px;
-    background-color: white;
     margin-bottom: 10px;
     margin-top: 40px;
+    transition: color 1000ms;
 } 
+
+.button-footer:hover{
+    color: #39b54a;
+}
 
 .button-container-footer p{                 /*parrafos del footer*/
     margin: 0px;
 }
+
+.textos-footer{
+    padding: 10px 10px 40px 10px;
+}
+
 
 .description{                               /*oculta nombre de producto*/
     display: none;
@@ -222,24 +224,43 @@ form div{                                   /*separa inserciones*/
     padding: 10px;
 }
 
+.button-type:hover{
+    background-color: #39b54a;
+}
+
 .button-type a{
     text-decoration: none;
     color: white;
+}
+
+.button-type{
+    transition: background-color 450ms;
 }
 
 form input:invalid{
     background-color: pink;
 }
 
-
 @media screen and (min-width:361px) and (max-width:769px) {
-    .description{
+    main section article:hover .description{
         display: block;
     }
 
+    main section article:hover i{
+        transform: rotate(-90deg);
+    }
+
+    main section article i{
+        transition: transform 450ms;
+    }
+
     main section article{
-        box-shadow: 0 0 10px rgb(100,100,100);
         width: 45%;
+        transition: box-shadow 450ms;
+    }
+
+    main section article:hover{
+        box-shadow: 0 0 10px rgb(100,100,100);
     }
 
     nav{
@@ -254,6 +275,7 @@ form input:invalid{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     header nav {
@@ -292,15 +314,27 @@ form input:invalid{
 }
 
 @media screen and (min-width:769px){
-    .description{
+    main section article:hover .description{
         display: block;
     }
 
+    main section article:hover i{
+        transform: rotate(-90deg);
+    }
+
+    main section article i{
+        transition: transform 450ms;
+    }
+
     main section article{
-        box-shadow: 0 0 10px rgb(100,100,100);
         width: 22%;
+        transition: box-shadow 450ms;
     }
     
+    main section article:hover{
+        box-shadow: 0 0 10px rgb(100,100,100);
+    }
+
     nav{
         display: block;
     }
@@ -313,6 +347,7 @@ form input:invalid{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     header nav {
@@ -341,5 +376,11 @@ form input:invalid{
     form{
         width: 30%;
         margin: auto;
+    }
+
+    .textos-footer{
+        display: flex;
+        margin: auto;
+        padding: 10px 10px 40px 10px;
     }
 }
